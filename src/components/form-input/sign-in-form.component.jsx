@@ -1,4 +1,4 @@
-import './form-input.styles.scss'
+import './sign-in-form.styles.scss'
 
 const FormInput = ({label, ...otherProps}) => {
     return(
@@ -10,7 +10,7 @@ const FormInput = ({label, ...otherProps}) => {
     }
         
         </div>
-        
+        //
     )
 }
 

@@ -13,7 +13,7 @@ import {
 
 
 
-const SignIn = () => {
+const Authentication = () => {
     /* impliments sign in with redirect OPTIONAL
     useEffect( () => {
         async function fetchdata() {
@@ -50,4 +50,4 @@ const SignIn = () => {
     );
 }
 
-export default SignIn
+export default Authentication
