@@ -1,4 +1,4 @@
-import './sign-in-form.styles.scss'
+import './form-input.styles.scss'
 
 const FormInput = ({label, ...otherProps}) => {
     return(
