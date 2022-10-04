@@ -18,17 +18,20 @@ const defaultFormFields = {
 
 
 
-const signInWithGoogle = async () => {
-  const {user} = await signInWithGooglePopup();
-  createUserDocumentFromAuth(user)
-  await createUserDocumentFromAuth(user)
-}
 
 
 
 const SignInForm = () => {
     const [formFields, setFormFields] = useState(defaultFormFields)
     const { email, password } = formFields;
+
+
+
+const signInWithGoogle = async () => {
+  const {user} = await signInWithGooglePopup();
+  setCurrentUser(user);
+  createUserDocumentFromAuth(user)
+}
 
     const { setCurrentUser } = useContext(UserContext)
 
