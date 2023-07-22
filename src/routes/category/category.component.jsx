@@ -12,14 +12,13 @@ import './category.styles.scss'
 
 const Category = () => {
     const { category } = useParams();
-    const categoriesMap = useSelector(selectCategoriesMap)
-    const [products, setProducts ] = useState(categoriesMap[category]);
-    console.log('render/re-rendering category component')
-
-    useEffect(()=> {
-        console.log('effect fired calling setProducts')
+    const categoriesMap = useSelector(selectCategoriesMap);
+    const [products, setProducts] = useState(categoriesMap[category]);
+  
+    useEffect(() => {
         setProducts(categoriesMap[category]);
-    },[category, categoriesMap])
+      }, [category, categoriesMap]);
+
     return (
         <Fragment>
         <h2 className='category-title' >{category.toUpperCase()}</h2>
